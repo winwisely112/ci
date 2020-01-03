@@ -28,10 +28,6 @@ git-clean:
 code:
 	code $(LIB_FSPATH)
 
-os-dep:
-	go get -u github.com/go-flutter-desktop/hover
-	go get -u github.com/go-flutter-desktop/go-flutter
-
 
 SAMPLE=
 SAMPLE_FSPATH=$(LIB_FSPATH)/$(SAMPLE)
@@ -46,7 +42,7 @@ flu-mob-run:
 
 
 flu-desk-init:
-	cd $(SAMPLE_FSPATH) && hover init $(LIB)/$(SAMPLE)
+	cd $(SAMPLE_FSPATH) && hover init
 flu-desk-init-clean:
 	rm -rf $(SAMPLE_FSPATH)/go
 flu-desk-run:
